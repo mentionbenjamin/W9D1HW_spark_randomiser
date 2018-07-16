@@ -17,6 +17,17 @@ public class NameTest {
         assertEquals("John", name.getName());
     }
 
+    @Test
+    public void setName(){
+        name.setName("Jonathon");
+        assertEquals("Jonathon", name.getName());
+    }
+
+    @Test
+    public void hasAge(){
+        assertEquals(24, name.getAge());
+    }
+
 
 
 }
