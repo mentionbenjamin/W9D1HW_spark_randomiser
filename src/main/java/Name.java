@@ -1,28 +1,25 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 public class Name {
 
-    private String name;
-    private int age;
 
-    public Name(String name, int age){
-        this.name = name;
-        this.age = age;
+
+    private ArrayList<String> names;
+
+    public Name() {
+        this.names = new ArrayList<String>();
+        names.add("Joe");
+        names.add("Jack");
+        names.add("Jill");
+        names.add("Jo-Anne");
+        names.add("Jabba");
     }
 
-
-
-    public String getName() {
-        return this.name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public int getAge() {
-        return this.age;
-    }
-    public void setAge(int age) {
-        this.age = age;
+    public String getRandomName(){
+        Collections.shuffle(names);
+        return names.get(0);
     }
 
 
