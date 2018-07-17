@@ -21,10 +21,10 @@ public class Name {
     }
 
     public ArrayList<String> getRandom2Names() {
-        ArrayList<String> twoNames = new ArrayList<>();
+        ArrayList<String> twoFoundNames = new ArrayList<>();
         Collections.shuffle(names);
-        twoNames.add(names.get(0));
-        twoNames.add(names.get(1));
-        return twoNames;
+        twoFoundNames.add(names.get(0));
+        twoFoundNames.add(names.get(1));
+        return twoFoundNames;
     }
 }

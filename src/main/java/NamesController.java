@@ -22,5 +22,18 @@ public class NamesController {
             model.put("names", foundName);
             return new ModelAndView(model, "one.vtl");
         }, velocityTemplateEngine);
+
+
+        get("/two", (req, res) -> {
+            Name name = new Name();
+            ArrayList<String> twoFoundNames = new ArrayList<>();
+            twoFoundNames = name.getRandom2Names();
+
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("names", twoFoundNames);
+            return new ModelAndView(model, "two.vtl");
+        }, velocityTemplateEngine);
+
+
     }
 }
